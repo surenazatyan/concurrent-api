@@ -1,5 +1,4 @@
-﻿using paymentAPI.Core.Types;
-using paymentAPI.Repositories.Models;
+﻿using paymentAPI.Repositories.Models;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -25,7 +24,7 @@ public class PaymentRepository
 
         try
         {
-            await Task.Delay(10000);
+            await Task.Delay(2000);
 
             var clientTransactions = _clientPayments.GetOrAdd(clientId, new List<TransactionDTO>());
             transactionDto.paymentId = Guid.NewGuid().ToString();

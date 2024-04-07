@@ -2,8 +2,6 @@
 using System.Text.RegularExpressions;
 
 namespace paymentAPI.Formatters;
-
-// Custom JsonNamingPolicy
 public class HyphenatedNamingPolicy : JsonNamingPolicy
 {
     public override string ConvertName(string name)

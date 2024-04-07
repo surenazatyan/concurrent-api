@@ -25,14 +25,6 @@ public class Startup
             {
                 options.JsonSerializerOptions.PropertyNamingPolicy = new HyphenatedNamingPolicy();
             });
-            
-        services.AddRequestTimeouts(options =>
-            {
-                options.DefaultPolicy =
-                    new RequestTimeoutPolicy { 
-                        Timeout = TimeSpan.FromMinutes(5)
-                    };                
-            });
 
         services.AddSingleton<PaymentRepository>();
         services.AddScoped<IPaymentService, PaymentService>();
@@ -41,7 +33,6 @@ public class Startup
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         app.UseRouting();
-        app.UseRequestTimeouts();
 
         app.UseEndpoints(endpoints =>
         {

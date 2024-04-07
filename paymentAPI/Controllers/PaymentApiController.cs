@@ -2,11 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
-using System;
 using System.Net;
 using paymentAPI.ViewModels;
-using System.Transactions;
-using paymentAPI.Core.Types;
 
 namespace paymentAPI.Controllers
 {
